@@ -1,0 +1,14 @@
+﻿@model IEnumerable<BadmintonShop.Models.DAL.Producer>
+
+@{
+    Layout = null;
+}
+@foreach (var item in Model)
+{
+<li>
+	<a href="/Test/productgird?idProducer=@item.ID">
+		<div class="brand-logo"><img src="@item.Images" alt=""></div>
+	</a>
+	
+</li>
+}

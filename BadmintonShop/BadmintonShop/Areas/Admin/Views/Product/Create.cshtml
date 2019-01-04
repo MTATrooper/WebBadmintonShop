@@ -1,0 +1,200 @@
+﻿@model BadmintonShop.Models.DAL.Product
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section jsFooter{
+    <script>
+        CKEDITOR.replace('Description');
+        CKFinder.setupCKEditor(null, '/ckfinder');
+        $('#btnSelectImage').on('click', function (e) {
+            e.preventDefault();
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (url) {
+                $('#txtImg').val(url);
+                $('#img').attr("src", url);
+            };
+            finder.popup();
+        })
+    </script>
+}
+@using (Html.BeginForm())
+{
+    <div class="col-md-8 col-sm-12 col-xs-12">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Advanced Tables -->
+                <div class="card">
+                    @Html.AntiForgeryToken()
+                    <div class="form-horizontal">
+                        <div class="card-action">
+                            Thêm Sản phẩm mới
+                        </div>
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ProducerID, "ProducerID", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.DropDownList("ProducerID", null,"---Chọn nhà sản xuất---", htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ProducerID, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.CategoryID, "CategoryID", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.DropDownList("CategoryID", null,"---Chọn danh mục sản phẩm---",htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.CategoryID, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control", @min = 500, @max = 1000000000 } })
+                                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Quantity, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Quantity, new { htmlAttributes = new { @class = "form-control", @min = 0, @max = 1000000000 } })
+                                @Html.ValidationMessageFor(model => model.Quantity, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TopHot, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.RadioButtonFor(model => model.TopHot, 0, new { @class = "radio-inline", @checked = "checked" }) Bình thường
+                                @Html.RadioButtonFor(model => model.TopHot, 1, new { @class = "radio-inline" }) Hàng Hot
+                                @Html.ValidationMessageFor(model => model.TopHot, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.NewProduct, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.RadioButtonFor(model => model.NewProduct, 0, new { @class = "radio-inline", @checked = "checked" }) Cũ
+                                @Html.RadioButtonFor(model => model.NewProduct, 1, new { @class = "radio-inline" }) Mới
+                                @Html.ValidationMessageFor(model => model.NewProduct, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Active, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.RadioButtonFor(model => model.Active, "Ngừng kinh doanh", new { @class = "radio-inline", @checked = "checked" }) Ngừng kinh doanh
+                                @Html.RadioButtonFor(model => model.Active, "Đang bán", new { @class = "radio-inline" }) Đang bán
+                                @Html.ValidationMessageFor(model => model.Active, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Advanced Tables -->
+                <div class="card">
+                    @Html.AntiForgeryToken()
+                    <div class="form-horizontal">
+                        <div class="card-action">
+                            Mô tả sản phẩm
+                        </div>
+                        <hr />
+                        <div style="margin:15px auto;overflow:hidden;">
+                            <div class="col-md-12">
+                                @Html.TextAreaFor(model => model.Description, new { @id = "Description" })
+                                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-xs-12">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Advanced Tables -->
+                <div class="card">
+                    @Html.AntiForgeryToken()
+                    <div class="form-horizontal">
+                        <div class="card-action">
+                            Ảnh sản phẩm
+                        </div>
+                        <hr />
+                        <div style="margin:15px auto;overflow:hidden;">
+                            <div class="col-md-11">
+                                @Html.TextBoxFor(model => model.IMG, new { @id = "txtImg" })
+                                <button id="btnSelectImage">Chọn ảnh</button>
+                                <img src="" id="img" width="240" height="240" style="display:block;" />
+                                @Html.ValidationMessageFor(model => model.IMG, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Advanced Tables -->
+                <div class="card">
+                    @Html.AntiForgeryToken()
+                    <div class="form-horizontal">
+                        <div class="card-action">
+                            Giảm giá
+                        </div>
+                        <hr />
+                        <div style="margin:15px auto;overflow:hidden;">
+                            <div class="col-md-11" style="margin:10px;">
+                                <input type="number" min="5" max="90" class="form-control" name="sale" id="inputSuccess2" placeholder="Giảm(%)">
+                            </div>
+                            <div class="col-md-11" style="margin:10px;">
+                                <label>Ngày bắt đầu</label>
+                                <input type="date" class="form-control" id="beginDate" name="beginDate">
+                            </div>
+                            <div class="col-md-11" style="margin:10px;">
+                                <label>Ngày kết thúc</label>
+                                <input type="date" class="form-control" id="endDate" name="endDate">
+                            </div>
+                            <div><span style="color:red;">@ViewBag.DateSale</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Advanced Tables -->
+                <div class="card">
+                    @Html.AntiForgeryToken()
+                    <div class="form-horizontal">
+                        <div style="margin:15px auto;overflow:hidden;">
+                            <div class="col-md-12">
+                                <input type="submit" value="Thêm sản phẩm" class="btn btn-success" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

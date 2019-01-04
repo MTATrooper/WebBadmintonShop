@@ -1,0 +1,29 @@
+﻿@using System.Globalization
+@model IEnumerable<BadmintonShop.Models.DAL.Product>
+@{
+	ViewBag.Title = "Test";
+	Layout = null;
+	CultureInfo culture = new CultureInfo("vi-VN");
+}
+@foreach (var item in Model)
+{
+	<div class="col-md-4 col-sm-6">
+		<div class="products">
+			<div class="thumbnail">
+				<a href="/Test/details/@item.ID">
+					<img width="150" height="220" src="@item.IMG" />
+				</a>
+			</div>
+			<div class="productname">
+				@Html.ActionLink(item.Name, "details", "Test", new { id = item.ID }, null)
+			</div>
+			<h4 class="price">
+				@item.Price.ToString("c", culture).Split(',')[0] VNĐ
+			</h4>
+			<div class="button_group">
+				<a href="/Test/AddToCart?productId=@item.ID&quantity=1" class="btn btn-success">Add To Cart</a>
+			</div>
+		</div>
+	</div>
+	
+}

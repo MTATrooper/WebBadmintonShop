@@ -1,0 +1,48 @@
+﻿@model BadmintonShop.Models.DAL.New
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- Advanced Tables -->
+        <div class="card">
+            <div class="card-action">
+                @Model.Title
+            </div>
+            <hr />
+            <div class="col-sm-6">
+                <div class="dataTables_length">
+                    <a class="btn btn-sm btn-default" href="/Admin/News/Index" title="Quay lại danh sách"><img src="~/Content/image/Go-back-icon.png" height="30" /></a>
+                    <a href="/Admin/News/Edit/@Model.ID" title="Chỉnh sửa" class="btn btn-default btn-sm"><img src="~/Content/image/edit-validated-icon.png" height="30" /></a>
+                    <a href="/Admin/News/Delete/@Model.ID" title="Xóa bài viết" class="btn btn-default btn-sm" onclick="return Xoa();"><img src="~/Content/image/Actions-edit-delete-icon.png" /></a>
+                    <script type="text/javascript" language="javascript">
+                                            function Xoa() {
+                                                var result = confirm("Bạn có thực sự muốn xóa không?");
+                                                if (result) {
+                                                    return true;
+                                                }
+                                                return false;
+                                            }
+                    </script>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <tr><td>@Html.DisplayNameFor(model =>model.Title)</td><td>@Html.DisplayFor(model => model.Title)</td></tr>
+                        <tr><td>@Html.DisplayNameFor(model => model.IsPublic)</td><td>@Html.DisplayFor(model => model.IsPublic)</td></tr>
+                        <tr><td>@Html.DisplayNameFor(model => model.NewsTypeID)</td><td>@Html.DisplayFor(model => model.NewsType.Name)</td></tr>
+                        <tr><td>@Html.DisplayNameFor(model => model.Author)</td><td>@Html.DisplayFor(model => model.Author)</td></tr>
+                        <tr><td>@Html.DisplayNameFor(model => model.CreatedDate)</td><td>@Html.DisplayFor(model => model.CreatedDate)</td></tr>
+                        <tr><td>@Html.DisplayNameFor(model => model.Content)</td><td>@Html.Raw(Model.Content)</td></tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <!--End Advanced Tables -->
+    </div>
+</div>

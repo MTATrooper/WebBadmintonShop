@@ -1,0 +1,17 @@
+﻿@model IEnumerable<BadmintonShop.Models.DAL.New>
+@{
+	ViewBag.Title = "catanews";
+	Layout = null;
+}
+@foreach (var item in Model)
+{
+	<li class="products">	
+		<div class="product-list-description">
+			<div class="productname">
+				
+				<span style="color:forestgreen">@Html.ActionLink(item.Title, "contentnews", "Test", new { id = item.ID }, null)</span>
+			</div>
+			<p><span style="font-size:14px">@item.CreatedDate</span></p>
+		</div>
+	</li>
+}

@@ -1,0 +1,42 @@
+﻿@model BadmintonShop.Models.DAL.Product
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- Advanced Tables -->
+        <div class="card">
+            <div class="card-action">
+                @Model.Name
+            </div>
+            <hr />
+            <div class="col-sm-6">
+                <div class="dataTables_length">
+                    <a class="btn btn-sm btn-default" href="/Admin/Product/Index"><img src="~/Content/image/Go-back-icon.png" height="30" /></a>
+                    <a class="btn btn-sm btn-default" href="/Admin/Sale/Index"><img src="~/Content/image/sale-icon.png" height="30" /></a>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <tr><td>Tên sản phẩm</td><td>@Html.DisplayFor(model => model.Name)</td></tr>
+                        <tr><td>Danh mục sản phẩm</td><td>@Html.DisplayFor(model => model.Category.Name)</td></tr>
+                        <tr><td>Nhà sản xuất</td><td>@Html.DisplayFor(model => model.Producer.Name)</td></tr>
+                        <tr><td>Hình ảnh</td><td><img src="@Model.IMG" /></td></tr>
+                        <tr><td>Giá sản phẩm</td><td>@Html.DisplayFor(model => model.Price)</td></tr>
+                        <tr><td>Số lượng</td><td>@Html.DisplayFor(model => model.Quantity)</td></tr>
+                        <tr><td>Mô tả sản phẩm</td><td>@Html.Raw(Model.Description)</td></tr>
+                        <tr><td>Sản phẩm hot</td><td>@Html.DisplayFor(model => model.TopHot)</td></tr>
+                        <tr><td>Sản phẩm mới</td><td>@Html.DisplayFor(model => model.NewProduct)</td></tr>
+                        <tr><td>Trạng thái kinh doanh</td><td>@Html.DisplayFor(model => model.Active)</td></tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <!--End Advanced Tables -->
+    </div>
+</div>

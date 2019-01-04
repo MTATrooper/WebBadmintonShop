@@ -1,0 +1,50 @@
+﻿@model BadmintonShop.Models.DAL.Product
+@using System.Globalization
+@{
+	Layout = null;
+	CultureInfo culture = new CultureInfo("vi-VN");
+}
+<div class="preview_image">
+	<div class="preview-small">
+		<img id="zoom_03" width="300" height="313" src="@Model.IMG" data-zoom-image="@Model.IMG" alt="">
+	</div>
+</div>
+<div class="products-description">
+	<h5 class="name">@Html.DisplayFor(model => model.Name)</h5>
+	<p>
+		<span class="light-red">
+			Còn hàng
+		</span>
+	</p>
+	<p>
+		@Html.Raw(@Model.Description)
+	</p>
+	<hr class="border">
+	<div class="price">
+		Price :
+		<span class="new_price">
+			@Model.Price.ToString("c", culture).Split(',')[0] VNĐ
+		</span>
+
+	</div>
+	<hr class="border">
+	<div class="wided">
+		@using (Html.BeginForm("AddToCart", "Test", FormMethod.Get))
+		{
+			<div class="qty">
+				<span style="font-size: 20px">Số lượng &nbsp;&nbsp;: </span>
+				<input type="hidden" name="productId" value="@Model.ID" />
+				<input id="qty"  type="number" title="Qty" value="1" min="1" max="5" name="quantity">
+			</div>
+			<div class="button_group">
+				<button class="btn btn-success" type="submit" onclick="document.getElementById('form-add_to_cart').submit()">
+					Add To Cart
+				</button>
+			</div>
+		}
+		
+	</div>
+	<div class="clearfix">
+	</div>
+	<hr class="border">
+</div>

@@ -1,0 +1,23 @@
+﻿@{
+	ViewBag.Title = "Index";
+	var cate = (List<BadmintonShop.Models.DAL.Category>)ViewBag.Cate;
+	var pro = (List<BadmintonShop.Models.DAL.Producer>)ViewBag.Pro;
+	Layout = null;
+}
+<ul class="nav navbar-nav">
+	<li><a href="/Test/index">Trang chủ</a></li>
+	@foreach (var i in cate)
+	{
+		<li class="dropdown">
+			 @Html.ActionLink(i.Name + " cầu lông", "productgird", "Test", new { idCate = i.ID }, null)
+			<div class="dropdown-menu">
+				<ul class="mega-menu-links">
+					@foreach (var j in pro)
+					{
+						<li>@Html.ActionLink(i.Name + " " + j.Name, "productgird", "Test", new { idCate = i.ID, idProducer = j.ID }, null)</li>
+					}
+				</ul>
+			</div>
+		</li>
+	}
+</ul>

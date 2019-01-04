@@ -1,0 +1,138 @@
+﻿@model BadmintonShop.Models.DAL.New
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section jsFooter{
+    <script>
+        CKEDITOR.replace('Description');
+        CKFinder.setupCKEditor(null, '/ckfinder');
+        $('#btnSelectImage').on('click', function (e) {
+            e.preventDefault();
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (url) {
+                $('#txtImg').val(url);
+                $('#img').attr("src", url);
+            };
+            finder.popup();
+        })
+    </script>
+}
+
+
+<div style="margin-bottom:15px; margin-left:15px;">
+    @Html.ActionLink("Xem danh sách", "Index")
+</div>
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Advanced Tables -->
+            <div class="card">
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <div class="card-action">
+                        Thêm tin tức
+                    </div>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.IsPublic, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.RadioButtonFor(model => model.IsPublic, 1, new { @class = "radio-inline", @checked = "checked" }) Public
+                            @Html.RadioButtonFor(model => model.IsPublic, 0, new { @class = "radio-inline" }) Hidden
+                            @Html.ValidationMessageFor(model => model.IsPublic, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    @*<div class="form-group">
+                            @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.TextAreaFor(model => model.Content, new { @id = "Description" })
+                                @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+                            </div>
+                        </div>*@
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Author, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Author, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Author, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CreatedDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.CreatedDate, new { htmlAttributes = new { @id = "today", @class = "form-control", @type = "date" } })
+                            @Html.ValidationMessageFor(model => model.CreatedDate, "", new { @class = "text-danger" })
+                        </div>
+                        <script>
+                            document.querySelector("#today").valueAsDate = new Date();
+                        </script>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.NewsTypeID, "NewsTypeID", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownList("NewsTypeID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.NewsTypeID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    @*<div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Create" class="btn btn-default" />
+                            </div>
+                        </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Advanced Tables -->
+            <div class="card">
+                @Html.AntiForgeryToken()
+                <div class="form-horizontal">
+                    <div class="card-action">
+                        Nội dung
+                    </div>
+                    <hr />
+                    <div style="margin:15px auto;overflow:hidden;">
+                        <div class="col-md-12">
+                            @Html.TextAreaFor(model => model.Content, new { @id = "Description" })
+                            @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <!-- Advanced Tables -->
+            <div class="card">
+                @Html.AntiForgeryToken()
+                <div class="form-horizontal">
+                    <div style="margin:15px auto;overflow:hidden;">
+                        <div class="col-md-12">
+                            <input type="submit" value="Save" class="btn btn-success" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

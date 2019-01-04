@@ -1,0 +1,14 @@
+﻿
+@model IEnumerable<BadmintonShop.Models.DAL.NewsType>
+
+@{
+	Layout = null;
+}
+@foreach (var item in Model)
+{
+	<li>
+		<a href="/Test/news?id=@item.ID">
+			<div><span style="color:red;font-size:16px"> @item.Name</span></div> 
+		</a>
+	</li>
+}

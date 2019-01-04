@@ -1,0 +1,122 @@
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\ApplicationInsights.config
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\roslyn\csc.exe
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\roslyn\vbc.exe
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\roslyn\VBCSCompiler.exe
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\BadmintonShop.dll.config
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\BadmintonShop.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\BadmintonShop.pdb
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Antlr3.Runtime.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\EntityFramework.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\EntityFramework.SqlServer.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.AI.Web.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.ApplicationInsights.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.Owin.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.Owin.Security.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Newtonsoft.Json.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Owin.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\System.Web.Helpers.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\System.Web.Mvc.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\System.Web.Optimization.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\System.Web.Razor.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\System.Web.WebPages.Deployment.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\System.Web.WebPages.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\System.Web.WebPages.Razor.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\WebGrease.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.AI.Web.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.ApplicationInsights.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\System.Web.Helpers.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\System.Web.Mvc.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\System.Web.Optimization.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\System.Web.Razor.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\System.Web.WebPages.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\System.Web.WebPages.Deployment.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\System.Web.WebPages.Razor.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Antlr3.Runtime.pdb
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Newtonsoft.Json.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\EntityFramework.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\EntityFramework.SqlServer.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.Owin.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.Owin.Security.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\obj\Debug\BadmintonShop.csprojResolveAssemblyReference.cache
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\obj\Debug\BadmintonShop.dll
+C:\Users\MINAT0\Desktop\BTL Web\BadmintonShop\BadmintonShop\obj\Debug\BadmintonShop.pdb
+D:\BadmintonShop\BadmintonShop\bin\ApplicationInsights.config
+D:\BadmintonShop\BadmintonShop\bin\roslyn\csc.exe
+D:\BadmintonShop\BadmintonShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\BadmintonShop\BadmintonShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\BadmintonShop\BadmintonShop\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\BadmintonShop\BadmintonShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\BadmintonShop\BadmintonShop\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\BadmintonShop\BadmintonShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\BadmintonShop\BadmintonShop\bin\roslyn\System.Collections.Immutable.dll
+D:\BadmintonShop\BadmintonShop\bin\roslyn\System.Reflection.Metadata.dll
+D:\BadmintonShop\BadmintonShop\bin\roslyn\vbc.exe
+D:\BadmintonShop\BadmintonShop\bin\roslyn\VBCSCompiler.exe
+D:\BadmintonShop\BadmintonShop\bin\roslyn\VBCSCompiler.exe.config
+D:\BadmintonShop\BadmintonShop\bin\BadmintonShop.dll.config
+D:\BadmintonShop\BadmintonShop\bin\BadmintonShop.dll
+D:\BadmintonShop\BadmintonShop\bin\BadmintonShop.pdb
+D:\BadmintonShop\BadmintonShop\obj\Debug\BadmintonShop.dll
+D:\BadmintonShop\BadmintonShop\obj\Debug\BadmintonShop.pdb
+D:\BadmintonShop\BadmintonShop\bin\System.Data.SQLite.dll
+D:\BadmintonShop\BadmintonShop\bin\System.Data.SQLite.xml
+E:\Projects\BadmintonShop\BadmintonShop\bin\ApplicationInsights.config
+E:\Projects\BadmintonShop\BadmintonShop\bin\roslyn\csc.exe
+E:\Projects\BadmintonShop\BadmintonShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Projects\BadmintonShop\BadmintonShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Projects\BadmintonShop\BadmintonShop\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Projects\BadmintonShop\BadmintonShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Projects\BadmintonShop\BadmintonShop\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Projects\BadmintonShop\BadmintonShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Projects\BadmintonShop\BadmintonShop\bin\roslyn\System.Collections.Immutable.dll
+E:\Projects\BadmintonShop\BadmintonShop\bin\roslyn\System.Reflection.Metadata.dll
+E:\Projects\BadmintonShop\BadmintonShop\bin\roslyn\vbc.exe
+E:\Projects\BadmintonShop\BadmintonShop\bin\roslyn\VBCSCompiler.exe
+E:\Projects\BadmintonShop\BadmintonShop\bin\roslyn\VBCSCompiler.exe.config
+E:\Projects\BadmintonShop\BadmintonShop\bin\BadmintonShop.dll.config
+E:\Projects\BadmintonShop\BadmintonShop\bin\BadmintonShop.dll
+E:\Projects\BadmintonShop\BadmintonShop\bin\BadmintonShop.pdb
+E:\Projects\BadmintonShop\BadmintonShop\bin\System.Data.SQLite.dll
+E:\Projects\BadmintonShop\BadmintonShop\bin\System.Data.SQLite.xml
+E:\Projects\BadmintonShop\BadmintonShop\obj\Debug\BadmintonShop.dll
+E:\Projects\BadmintonShop\BadmintonShop\obj\Debug\BadmintonShop.pdb

@@ -1,0 +1,160 @@
+﻿@model BadmintonShop.Models.DAL.Account
+<div class="container_fullwidth">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-9">
+				<div class="checkout-page">
+					<ol class="checkout-steps">
+						<li class="steps">
+							<a href="/Test/checkout" class="step-title">
+								01. Đăng nhập
+							</a>
+						</li>
+						<li class="steps active">
+							<a href="/Test/checkout2" class="step-title">
+								02. Đăng ký tài khoản
+							</a>
+							<div class="step-description">
+								@using (Html.BeginForm())
+								{
+								@Html.AntiForgeryToken()
+								<form>
+									<div class="row">
+										@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+										<div class="col-md-6 col-sm-6">
+											<div class="your-details">
+												<h5>
+													Thông tin chi tiết của bạn
+												</h5>
+												<div class="form-row">
+													<label class="lebel-abs">
+														Họ và tên
+														<strong class="red">
+															*
+														</strong>
+													</label>
+													@Html.TextBoxFor(model => model.Fullname, new { @id = "textfield", @class = "input namefild", @required = "true" })
+													
+												</div>
+												<div class="form-row">
+													<label class="lebel-abs">
+														Ngày sinh
+														<strong class="red">
+															*
+														</strong>
+													</label>
+													@Html.TextBoxFor(model => model.Birthday, new { @id = "textfield", @class = "input namefild", @required = "true" })
+													@Html.ValidationMessageFor(model => model.Birthday, "", new { @class = "text-danger" })
+												</div>
+												<div class="form-row">
+													<label class="lebel-abs">
+														Giới tính
+														<strong class="red">
+															*
+														</strong>
+													</label>
+													@Html.TextBoxFor(model => model.Sex, new { @id = "textfield", @class = "input namefild", @required = "true" })
+													@Html.ValidationMessageFor(model => model.Sex, "", new { @class = "text-danger" })
+												</div>
+												<div class="form-row">
+													<label class="lebel-abs">
+														Điện thoại
+														<strong class="red">
+															*
+														</strong>
+													</label>
+													@Html.TextBoxFor(model => model.PhoneNumber, new { @id = "textfield", @class = "input namefild", @required = "true" })
+													@Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+												</div>
+												<div class="form-row">
+													<label class="lebel-abs">
+														Email
+														<strong class="red">
+															*
+														</strong>
+													</label>
+													@Html.TextBoxFor(model => model.Email, new { @id = "textfield", @class = "input namefild", @required = "true", @type = "email" })
+													@Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+												</div>
+												<div class="pass-wrap">
+													<div class="form-row">
+														<label class="lebel-abs">
+															Địa chỉ
+															<strong class="red">
+																*
+															</strong>
+														</label>
+														@Html.TextBoxFor(model => model.Address, new { @id = "textfield", @class = "input namefild", @required = "true" })
+														@Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+													</div>
+												</div>										
+											</div>
+										</div>
+										<div class="col-md-6 col-sm-6">
+											<div class="your-details">
+												<h5>
+													Tài khoản
+												</h5>
+												<div class="form-row">
+													<label class="lebel-abs">
+														User name
+														<strong class="red">
+															*
+														</strong>
+													</label>
+													@Html.TextBoxFor(model => model.Username, new { @id = "textfield", @class = "input namefild", @required = "true" })
+													
+												</div>
+												<div class="form-row">
+													<label class="lebel-abs">
+														Password
+														<strong class="red">
+															*
+														</strong>
+													</label>
+													@Html.TextBoxFor(model => model.Password, new { @id = "textfield", @class = "input namefild", @minlength = "6", @maxlength = "10", @required = "true", @type = "password" })
+													
+												</div>											
+												
+												<button type="submit">
+													Đăng ký
+												</button>
+												@if (TempData["Error"] != null)//kiểm tra thông báo để hiển thị
+												{
+													<div class="alert alert-error alert-dismissable">
+														<button type="button" class="close" data-dismiss="alert">×</button>	
+														<span style="font-size:16px;color:red">
+															@TempData["Error"]
+														</span>
+													</div>
+												}
+												else if (TempData["Success"] != null)
+												{
+													<div class="alert alert-success alert-dismissable">
+														<button type="button" class="close" data-dismiss="alert">×</button>
+														<span style="font-size:16px;color:forestgreen">
+															@TempData["Success"]
+														</span>
+														
+													</div>
+
+												}
+											</div>
+										</div>
+									</div>
+								</form>
+								}
+							</div>
+						</li>
+						
+					</ol>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix">
+		</div>
+	</div>
+</div>
+<div class="clearfix">
+</div>

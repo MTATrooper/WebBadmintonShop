@@ -1,0 +1,151 @@
+﻿@model BadmintonShop.Models.DAL.Account
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    BadmintonShop.Models.DAL.DataConnect db = new BadmintonShop.Models.DAL.DataConnect();
+    List<BadmintonShop.Models.DAL.Bill> bill = (from b in db.Bill where b.AccountID == Model.ID select b).ToList();
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- Advanced Tables -->
+        <div class="card">
+            <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top:10px;margin-bottom:10px;">
+                <div class="profile_img">
+                    <div id="crop-avatar">
+                        <!-- Current avatar -->
+                        <img class="img-responsive avatar-view" src="~/Content/image/anh avatar dep 3.png" alt="Avatar" title="Change the avatar">
+                    </div>
+                </div>
+                <h3>@Model.Fullname</h3>
+
+                <ul class="list-unstyled user_data">
+                    <li>
+                        <i class="fa fa-map-marker user-profile-icon"></i> @Model.Address
+                    </li>
+                    <li class="m-top-xs">
+                        <i class="fa fa-calendar user-profile-icon"></i>
+                        @Model.Birthday
+                    </li>
+                    <li class="m-top-xs">
+                        <i class="fa fa-external-link user-profile-icon"></i>
+                        <a href="#" target="_blank">@Model.Email</a>
+                    </li>
+                </ul>
+
+                <a href="/Admin/Account/Edit/@Model.ID" class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Sửa thông tin</a>
+                <br>
+
+
+            </div>
+            <div class="col-md-9">
+                <div class="card-action">
+                    Các hóa đơn đã đặt
+                </div>
+                <hr />
+                @if (bill.Count > 0)
+                {
+                    <div class="card-content">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <tr>
+                                    <th>STT</th>
+                                    <th>
+                                        Tên người nhận
+                                    </th>
+                                    <th>
+                                        Ngày lập
+                                    </th>
+                                    <th>
+                                        Số điện thoại
+                                    </th>
+                                    <th>
+                                        Địa chỉ
+                                    </th>
+                                    <th>
+                                        Trạng thái
+                                    </th>
+                                    <th>Hành động</th>
+                                </tr>
+                                @{ int i = 1;}
+                                @foreach (var item in bill)
+                                {
+                                    <tr>
+                                        <td>@i</td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Fullname)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Date)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Phonenumber)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Address)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Status)
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <a href="/Admin/Bill/BillDetail/@item.ID" data-toggle="tooltip" title="Chi tiết hóa đơn" class="btn btn-default btn-sm">
+                                                    <img src="~/Content/image/Actions-view-list-details-icon.png" />
+                                                </a>
+                                                <button title="Xóa hóa đơn" class="btn btn-default btn-sm" id="delete_@item.ID">
+                                                    <img src="~/Content/image/Actions-edit-delete-icon.png" />
+                                                </button>
+                                                <script type="text/javascript" language="javascript">
+                                                $(document).ready(function () {
+                                                    $('#delete_@item.ID').click(function (e) {
+                                                        e.preventDefault();
+                                                        var result = confirm("Bạn có thực sự muốn xóa hóa đơn này không?");
+                                                        if (result) {
+                                                            var ID = @item.ID;
+                                                            $.ajax({
+                                                                type: 'POST',
+                                                                url: '/Account/DeleteBill',
+                                                                data: {id : ID},
+                                                                dataType: 'Json',
+                                                                success: function (msg) {
+                                                                    // Replace the divs content with the page methods return.
+                                                                    alert(msg.message);
+                                                                    if(msg.message != "Không xóa được!")
+                                                                        location.reload();
+                                                                }
+                                                            })
+                                                        }
+                                                    })
+                                                })
+                                                function Xoa() {
+
+                                                    if (result) {
+                                                        return true;
+                                                    }
+                                                    return false;
+                                                }
+                                                </script>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    i++;
+                                }
+
+                            </table>
+                        </div>
+                    </div>
+                }
+                else
+                {<h4>Không có hóa đơn nào</h4>}
+            </div>
+        </div>
+    </div>
+</div>
+@*<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
